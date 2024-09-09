@@ -1,0 +1,86 @@
+/*
+CSS HEX
+--lion: #af9164ff;
+--cosmic-latte: #f7f3e3ff;
+--silver: #b3b6b7ff;
+--barn-red: #6f1a07ff;
+--bistre: #2b2118ff;
+*/
+
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+    box-sizing: border-box;
+  }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    background: #b3b6b7ff;
+    margin: 0;
+}
+
+a {
+    color: #6f1a07ff;
+
+}
+a:hover {
+    color: #af9164ff;
+    text-decoration: none;
+}
+footer a {
+    color: #f7f3e3ff;
+
+}
+footer a:hover {
+    color: #b3b6b7ff;
+    text-decoration: none;
+}
+.btn {
+    background: #6f1a07ff;
+    color: #f7f3e3ff;
+    text-decoration: none;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+}
+
+.home {
+    background: url(../images/PuntoFaro.jpg) no-repeat;
+    background-size: cover;
+}
+.home .content-wrapper {
+    background: rgb(255 255 255 / 0.9);
+}
+
+.resume header::before {
+    background: url(../images/PuntoFaro.jpg) center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 375px;
+}
+
+footer {
+    background: #2b2118ff;
+    color: #af9164ff;
+}
+.socials {
+    list-style-type: none;
+    padding: 0;
+
+}
+.socials li {
+    display: inline-block;
+}
+.socials img {
+    width: 32px;
+}
