@@ -80,7 +80,7 @@ function startPlacingImages() {
         if (count >= 100) {
             clearInterval(interval);
         }
-    }, 4000);
+    }, 5000);
 }
 
 document.addEventListener( "DOMContentLoaded", placeClumpText("clump1-text", "clump1-click", "Sweetie,"));

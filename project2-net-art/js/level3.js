@@ -82,7 +82,7 @@ function startPlacingImages() {
         if (count >= 100) {
             clearInterval(interval);
         }
-    }, 5000);
+    }, 7000);
 }
 
 document.addEventListener( "DOMContentLoaded", placeClumpText("clump1-text", "clump1-click", "It's time"));
