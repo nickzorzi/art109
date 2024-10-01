@@ -1,0 +1,436 @@
+/*
+CSS RESETS:
+ Border box reset:
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ 62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    font-size: 1.6rem;
+    /* font-size 1.6rem is now the same as 16px */
+    line-height: 1.6;
+    overflow: hidden;
+}
+.button {
+    background: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    line-height: 70px;
+    font-size: 40px;
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer; 
+}
+.button:hover {
+    background: silver;
+}
+.title {
+    background: white;
+    padding: 10px;
+    line-height: 70px;
+    font-size: 100px;
+    color: black;
+    border-radius: 20px;
+    text-align: center; 
+}
+.desc {
+    background: white;
+    padding: 10px;
+    line-height: 20px;
+    font-size: 20px;
+    color: black;
+    border-radius: 20px;
+    text-align: center; 
+}
+
+
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    position: relative;
+    width: 100vw;
+    height: 75vh;
+    background-color: white;
+}
+.game-page {
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: silver;
+    justify-content: center;
+}
+.home-page {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    background-color: royalblue;
+}
+.content-wrapper {
+    margin: 0 600;
+    padding: 10px;
+    max-width: 100vw;
+    z-index: 2;
+}
+.button-wrapper {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 800px;
+}
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    align-content: center;
+    justify-content: space-around;
+}
+.phrase {
+    background: rgba(70, 70, 70, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.pop-up#warning-text {
+    background: red;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+.pop-up#next-text {
+    background: goldenrod;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+.pop-up#end-text {
+    background: green;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+.hidden {
+    visibility: hidden;
+}
+.transparent {
+    display: none;
+}
+
+.image-class:hover {
+    rotate: 360deg;
+    transition-duration: 8s;
+    cursor: pointer;
+}
+.image-class {
+    position: absolute;
+    display: none;
+}
+
+.clump1 {
+    background: forestgreen;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+.clump2 {
+    background: teal;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+.clump3 {
+    background: mediumblue;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+.clump4 {
+    background: slateblue;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+.clump5 {
+    background: indigo;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+.clump6 {
+    background: mediumvioletred;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+.clump7 {
+    background: darkred;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+.clump8 {
+    background: orangered;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+.clump9 {
+    background: darkorange;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+.clump10 {
+    background: gold;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+.clump11 {
+    background: yellowgreen;
+    padding: 20px 8px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+
+.filler-text {
+    position: absolute;
+    font-size: 24px;
+    color: #333;
+    user-select: none;
+}
+.clump1-text {
+    position: absolute;
+    font-size: 24px;
+    color: transparent;
+}
+.clump1-text:hover {
+    background: forestgreen;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.clump2-text {
+    position: absolute;
+    font-size: 24px;
+    color: transparent;
+}
+.clump2-text:hover {
+    background: teal;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.clump3-text {
+    position: absolute;
+    font-size: 24px;
+    color: transparent;
+}
+.clump3-text:hover {
+    background: mediumblue;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.clump4-text {
+    position: absolute;
+    font-size: 24px;
+    color: transparent;
+}
+.clump4-text:hover {
+    background: slateblue;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.clump5-text {
+    position: absolute;
+    font-size: 24px;
+    color: transparent;
+}
+.clump5-text:hover {
+    background: indigo;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.clump6-text {
+    position: absolute;
+    font-size: 24px;
+    color: transparent;
+}
+.clump6-text:hover {
+    background: mediumvioletred;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.clump7-text {
+    position: absolute;
+    font-size: 24px;
+    color: transparent;
+}
+.clump7-text:hover {
+    background: darkred;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.clump8-text {
+    position: absolute;
+    font-size: 24px;
+    color: transparent;
+}
+.clump8-text:hover {
+    background: orangered;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.clump9-text {
+    position: absolute;
+    font-size: 24px;
+    color: transparent;
+}
+.clump9-text:hover {
+    background: darkorange;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.clump10-text {
+    position: absolute;
+    font-size: 24px;
+    color: transparent;
+}
+.clump10-text:hover {
+    background: gold;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.clump11-text {
+    position: absolute;
+    font-size: 24px;
+    color: transparent;
+}
+.clump11-text:hover {
+    background: yellowgreen;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+#image-animate {
+    animation-name: rotate;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
