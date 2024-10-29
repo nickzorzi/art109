@@ -28,6 +28,14 @@ body {
     font-size: 1.5rem;
     line-height: 1.4;
 }
+
+#three-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
 h1, h2, h3 {
     font-family: "Caveat", cursive;
     font-weight: 400;
@@ -46,7 +54,7 @@ h3 {
 
 a {
     color: #6f1a07ff;
-
+    text-shadow: 1px 1px 2px #000000;
 }
 a:hover {
     color: #af9164ff;
@@ -77,6 +85,13 @@ footer a:hover {
     margin: 0 auto;
     padding: 30px;
     max-width: 900px;
+}
+
+.content-wrapper-resume {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+    color: white;
 }
 
 .home {
@@ -111,10 +126,12 @@ footer a:hover {
 
 .resume-section {
     margin-bottom: 50px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .resume-section h2 {
-    border-bottom: 2px dashed #2b2118ff;
+    border-bottom: 2px dashed white;
 }
 
 .download-link {
