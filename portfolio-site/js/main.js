@@ -29,13 +29,13 @@ function init() {
     const geometry = new THREE.TorusKnotGeometry( 10, 1, 100, 16 );
     // material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 
-    const texture = new THREE.TextureLoader().load('textures/ice002_1K-JPG_Color.jpg');
+    const texture = new THREE.TextureLoader().load('../textures/ice002_1K-JPG_Color.jpg');
     const material = new THREE.MeshBasicMaterial({ map: texture });
     cube = new THREE.Mesh( geometry, material );
     scene.add( cube );
 
     const geometry2 = new THREE.SphereGeometry( 2, 32, 16 );
-    const texture2 = new THREE.TextureLoader().load('textures/grasslight-big.jpg');
+    const texture2 = new THREE.TextureLoader().load('../textures/grasslight-big.jpg');
     const material2 = new THREE.MeshBasicMaterial( { map: texture2 } ); 
     sphere = new THREE.Mesh( geometry2, material2 );
     scene.add( sphere );

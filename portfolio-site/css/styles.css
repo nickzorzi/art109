@@ -27,6 +27,7 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 1.4;
+    height: auto;
 }
 
 #three-container {
@@ -54,7 +55,7 @@ h3 {
 
 a {
     color: #6f1a07ff;
-    text-shadow: 1px 1px 2px #000000;
+    /*text-shadow: 1px 1px 2px #000000;*/
 }
 a:hover {
     color: #af9164ff;
@@ -245,4 +246,31 @@ footer {
         text-align: center;
         padding: 10px;
     }
+}
+
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+  
+.nav {
+    float: left;
+}
+  
+.nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.nav a:hover {
+    background-color: #111;
 }
