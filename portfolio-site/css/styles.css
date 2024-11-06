@@ -27,7 +27,7 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 1.4;
-    height: auto;
+    height: 100%;
 }
 
 #three-container {
@@ -254,9 +254,9 @@ footer {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100vw;
 }
   
 .nav {

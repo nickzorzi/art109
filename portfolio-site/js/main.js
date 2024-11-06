@@ -9,7 +9,9 @@ import * as THREE from 'three';
 import { OrbitControls } from 'https://unpkg.com/three@0.162.0/examples/jsm/controls/OrbitControls.js';
 //import { GLTFLoader } from 'https://unpkg.com/three@0.162.0/examples/jsm/loaders/GLTFLoader.js'; // to load 3d models
 
-let scene, camera, renderer, cube, sphere, controls;
+let scene, camera, renderer, cube, sphere, controls, particlesMesh;
+
+const clock = new THREE.Clock();
 
 function init() {
 
@@ -26,19 +28,51 @@ function init() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.querySelector("#three-container").appendChild(renderer.domElement);
     
-    const geometry = new THREE.TorusKnotGeometry( 10, 1, 100, 16 );
+    const geometry = new THREE.TorusKnotGeometry( 10, 1, 300, 32 );
     // material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-
-    const texture = new THREE.TextureLoader().load('../textures/ice002_1K-JPG_Color.jpg');
-    const material = new THREE.MeshBasicMaterial({ map: texture });
-    cube = new THREE.Mesh( geometry, material );
+    // const texture = new THREE.TextureLoader().load('../textures/ice002_1K-JPG_Color.jpg');
+    // const material = new THREE.MeshBasicMaterial({ map: texture });
+    const material = new THREE.PointsMaterial({
+        size: 0.01,
+        color: 'yellow'
+    });
+    cube = new THREE.Points( geometry, material );
+    // cube = new THREE.Mesh( geometry, material );
     scene.add( cube );
 
     const geometry2 = new THREE.SphereGeometry( 2, 32, 16 );
-    const texture2 = new THREE.TextureLoader().load('../textures/grasslight-big.jpg');
-    const material2 = new THREE.MeshBasicMaterial( { map: texture2 } ); 
-    sphere = new THREE.Mesh( geometry2, material2 );
+    // const texture2 = new THREE.TextureLoader().load('../textures/grasslight-big.jpg');
+    // const material2 = new THREE.MeshBasicMaterial( { map: texture2 } ); 
+    const material2 = new THREE.PointsMaterial({
+        size: 0.01,
+        color: 'red'
+    });
+    // sphere = new THREE.Mesh( geometry2, material2 );
+    sphere = new THREE.Points( geometry2, material2 );
     scene.add( sphere );
+
+    //space particles
+
+    const particlesGeometry = new THREE.BufferGeometry;
+    const particlesCnt = 50000;
+
+    const posArray = new Float32Array(particlesCnt * 3);
+
+    for (let i = 0; i < particlesCnt * 3; i++) {
+        //posArray[i] = Math.random()
+        //posArray[i] = Math.random() - 0.5
+        posArray[i] = (Math.random() - 0.5) * 150
+    }
+
+    const particlesMaterial = new THREE.PointsMaterial({
+        size: 0.005,
+        color: 'white'
+    });
+
+    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+    particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+    scene.add(particlesMesh);
 
     // ~~~~~~~~~~~~~~~~ Initiate add-ons ~~~~~~~~~~~~~~~~
     //controls = new OrbitControls(camera, renderer.domElement);
@@ -46,6 +80,15 @@ function init() {
 
     camera.position.z = 10;
 
+}
+
+document.addEventListener("mousemove", animateParticles);
+let mouseX = 0;
+let mouseY = 0;
+
+function animateParticles(event) {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
 }
 
 function animate() {
@@ -66,6 +109,13 @@ function animate() {
     if (cube && sphere) {
         cube.rotation.x = scrollY * .001;
         sphere.rotation.y = scrollY * .001;
+    }
+
+    const elapsedTime = clock.getElapsedTime();
+
+    if (particlesMesh) {
+        particlesMesh.rotation.y = (-mouseY * 0.1) * (elapsedTime * 0.001);
+        particlesMesh.rotation.x = (-mouseX * 0.1) * (elapsedTime * 0.001);
     }
 
     //controls.update();
