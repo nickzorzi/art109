@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Starter File</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- use an import map to link to the Three.js CDN -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+        }
+      }
+    </script>
+    
+</head>
+
+
+<body>
+    <div id="Particles">
+        <canvas>
+
+        </canvas>
+      </div>
+      <script type="module">
+        import {particlesCursor} from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
+        const pc = particlesCursor ({
+          el: document.getElementById('Particles'),
+          gpgpuSize: 1024,
+          colors: [0x0000fc, 0x0ff0ff],
+          color: 0xff00ff,
+          coordScale: 0.09,
+          noiseIntensity: 0.003,
+          noiseTimeCoef: 0.0011,
+          pointSize: 4,
+          PointDecay: 0.0095,
+          sleepRadiusX: 450,
+          sleepRadiusY: 350,
+          sleepTimeCoefX: 0.002,
+          sleepTimeCoefY: 0.002,
+        });
+      </script>
+
+</body>
+</html>

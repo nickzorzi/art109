@@ -35,12 +35,63 @@
       </div>
     </main> -->
 
+    <nav>
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        <li><a href="cursor/index.html">Cursor</a></li>
+        <li><a href="cursor/index.html">Cursor!</a></li>
+        <li><a href="cursor/index.html">CURSOR</a></li>
+        <li><a href="cursor/index.html">CURSOR!</a></li>
+      </ul>
+
+      <ul>
+        <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        <li class="hideOnMobile"><a href="cursor/index.html">Cursor</a></li>
+        <li class="hideOnMobile"><a href="cursor/index.html">Cursor!</a></li>
+        <li class="hideOnMobile"><a href="cursor/index.html">CURSOR</a></li>
+        <li class="hideOnMobile"><a href="cursor/index.html">CURSOR!</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <div class="container">
+        <h1>Galaxy</h1>
+        <p>hello worlds <a href="cursor/index.html">go to cursor world</a></p>
+      </div>
+    </div>
+
     <canvas id="bg">
-          
+  
     </canvas>
 
 
     <!-- Link to your Javascript file as a type="module", this will execute the file after the HTML is loaded -->
     <script type="module" src="js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js" integrity="sha512-IxxYrSNXnt/RJlxNX40+7BQL88FLqvdpVpuV9AuvpNH/NFP0L8xA8WLxWTXx6PYExB5R/ktQisp6tIrnLn8xvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      
+      const content = CSSRulePlugin.getRule('.content:before');
+      const h1 = document.querySelector('h1');
+      const p = document.querySelector('p');
+      const tl = gsap.timeline();
+
+      tl.from(content, {delay: .5, duration: 4, cssRule: {scaleX: 0}});
+      tl.to(h1, {duration: 2, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', y: '30px'}, "-=3")
+      tl.to(p, {duration: 4, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', y: '30px'}, "-=2")
+
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+
+      function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+      }
+    </script>
+
 </body>
 </html>
