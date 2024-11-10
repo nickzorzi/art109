@@ -21,13 +21,18 @@
 
     <!-- Link to your Javascript file as a type="module", this will execute the file after the HTML is loaded -->
     <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/slideshow.js"></script>
 
   </head>
 
   <body>
     <ul id="navbar">
       <li class="nav"><a href="index.html">Home</a></li>
-      <li class="nav"><a href="projects/index.html">Projects</a></li>
+      <!-- <li class="nav"><a href="projects/index.html">Projects</a></li> -->
+      <li class="nav"><a href="coding/index.html">Coding</a></li>
+      <li class="nav"><a href="3d/index.html">3D Modeling</a></li>
+      <li class="nav"><a href="digitalvideo/index.html">Digital Video</a></li>
+      <li class="nav"><a href="makerfaire/index.html">Maker Faire</a></li>
     </ul>
   </body>
 
@@ -37,28 +42,87 @@
 
     </div>
 
-    <!-- //  INTRO  // -->
-    <div class="content-wrapper">
-      <div class="content-bg">
+
+    <div class="content-wrapper" id="front-page">
+      <div class="content-bg" id="main-title">
         <header>
-          <!-- Start content edits below this line. -->
-          <h1>Nicolas Zorzi</h1>
-          <h2>4th Year Digital Media Art Major @SJSU</h2>
-
-          <!-- End content edits here. -->
+          <h1 class="yellow">Nicolas Zorzi</h1>
+          <h2 class="blue">4th Year Digital Media Art Major @SJSU</h2>
         </header>
-
-        <!-- //  ABOUT ME  // -->
         <main>
-          <!-- Start content edits below this line. -->
-          <p>I like to create art in various digital mediums, such as: Video Games, Films, Graphics, and 3d Modeling.</p>
-          <p>To learn more about my work history, check out my <a href="projects/index.html">projects</a>. Thanks for stopping by!</p>
-
-          <!-- End content edits here. -->
+          <p>I like to create art in various madiums, specifically in: Coding, 3D Modeling, and Digital Video.</p>
+          <p>To learn more about my works, check out my projects down below.</p>
+          <p>Thanks for stopping by!</p>
         </main>
+
+        <!-- <br> -->
+
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 8</div>
+              <a href="coding/index.html">
+                <img src="images/DevilsAcre.png" style="width:100%">
+              </a>
+            <div class="text"><i>Devil's Acre</i>, 2023</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 8</div>
+              <a href="coding/index.html">
+                <img src="images/DeathTides.png" style="width:100%">
+              </a>
+            <div class="text"><i>Death Tides</i>, 2024</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 8</div>
+              <a href="coding/index.html">
+                <img src="images/MultilingualDilemma.png" style="width:100%">
+              </a>
+            <div class="text"><i>Multilingual Dilemma</i>, 2024</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 8</div>
+              <a href="coding/index.html">
+                <img src="images/SoundBounce.png" style="width:100%">
+              </a>
+            <div class="text"><i>Sound Bounce</i>, 2023</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 8</div>
+              <a href="3d/index.html">
+                <img src="images/OilRig3D.png" style="width:100%">
+              </a>
+            <div class="text"><i>Oil Rig Environment</i>, 2024</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">6 / 8</div>
+              <a href="makerfaire/index.html">
+                <img src="images/MicroPerform.png" style="width:100%">
+              </a>
+            <div class="text"><i>Micro Perform</i>, 2024</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">7 / 8</div>
+              <a href="digitalvideo/index.html">
+                <img src="images/ThePackageCityResize.png" style="width:100%">
+              </a>
+            <div class="text"><i>The Package</i>, 2024</div>
+          </div>
+    
+          <div class="mySlides fade">
+            <div class="numbertext">8 / 8</div>
+              <a href="digitalvideo/index.html">
+                <img src="images/TheScrewdriver2DiscoveryResize.png" style="width:100%">
+              </a>
+            <div class="text"><i>The Screwdriver 2</i>, 2024</div>
+          </div>
       </div>
     </div>
-    
 
     <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
     <footer>
@@ -67,13 +131,13 @@
 
       <!-- Add or remove any networks. -->
       <ul class="socials">
-        <li>
+        <!-- <li>
           <a href="#" target="_blank"><img src="images/icon-logo-twitter.png" alt="My Twitter"></a>
-        </li>
+        </li> -->
         <li>
-          <a href="#" target="_blank"><img src="images/icon-logo-linkedin.png" alt="My LinkedIn"></a>
+          <a href="https://www.linkedin.com/in/nicolas-zorzi-13348524a/" target="_blank"><img src="images/icon-logo-linkedin.png" alt="My LinkedIn"></a>
         </li>
-        <li>
+        <!-- <li>
           <a href="#" target="_blank"><img src="images/icon-logo-facebook.png" alt="My Facebook"></a>
         </li>
         <li>
@@ -81,6 +145,9 @@
         </li>
         <li>
           <a href="#" target="_blank"><img src="images/icon-logo-instagram.png" alt="My Instagram"></a>
+        </li> -->
+        <li>
+          <a href="https://zorzini.itch.io/" target="_blank"><img src="images/icon-logo-itchio.png" alt="My Itch.io"></a>
         </li>
       </ul>
       <!-- End content edits here. -->

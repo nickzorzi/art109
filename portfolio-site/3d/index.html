@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects | Nicolas Zorzi | Digital Media Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- use an import map to link to the Three.js CDN -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <!-- Link to your Javascript file as a type="module", this will execute the file after the HTML is loaded -->
+    <script type="module" src="../js/main.js"></script>
+
+  </head>
+
+  <body>
+    <ul id="navbar">
+      <li class="nav"><a href="../index.html">Home</a></li>
+      <!-- <li class="nav"><a href="projects/index.html">Projects</a></li> -->
+      <li class="nav"><a href="../coding/index.html">Coding</a></li>
+      <li class="nav"><a href="index.html">3D Modeling</a></li>
+      <li class="nav"><a href="../digitalvideo/index.html">Digital Video</a></li>
+      <li class="nav"><a href="../makerfaire/index.html">Maker Faire</a></li>
+    </ul>
+  </body>
+
+  <body class="home">
+
+    <div id="three-container">
+
+    </div>
+
+    <!-- <a class="btn download-link" ref="#">Download PDF</a> -->
+
+    <div class="content-wrapper" id="front-page">
+      <div class="content-bg" id="main-title">
+        <header>
+          <h1 class="yellow">3D Modeling Projects</h1>
+          <p>Create stylized or realistic models to help paint a picture or tell a story visually.</p>
+        </header>
+      </div>
+    </div>
+
+    <div class="content-wrapper" id="last-section">
+      <div class="content-bg" id="main-title">
+        <section class="resume-section">
+          <h2 class="yellow">3D Game Enviroment</h2>
+          <p>Made with Blender and Unity to create a mock video game enviroment.</p>
+  
+          <div class="project-wrapper">
+            <section class="project-item">
+              <img src="../images/OilRig3D.png" alt="Oil Rig Enviroment Title" width="1200px" height="">
+              <h3 class="yellow"><i>Oil Rig Enviroment</i>, 2024, Art 102</h3>
+              <p>Creating 3D models in Blender to be arranged and designed into a oil rig game enviroment in Unity. All images and recordings of the oil rig enviroment are taken through the Unity gameplay camera. This shows the concept game enviroment as a functioning environment for a possible real video game development use.</p>
+              <p>Team Members: Ben Beary</p>
+              <a class="btn" href="#" target="_blank">Watch</a>
+            </section>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+    <footer>
+      <!-- Start content edits below this line. -->
+      <p>© 2023 by Nicolas Zorzi | <a href="mailto:nicolas.zorzi@sjsu.edu">nicolas.zorzi@sjsu.edu</a></p>
+
+      <!-- Add or remove any networks. -->
+      <ul class="socials">
+        <!-- <li>
+          <a href="#" target="_blank"><img src="images/icon-logo-twitter.png" alt="My Twitter"></a>
+        </li> -->
+        <li>
+          <a href="https://www.linkedin.com/in/nicolas-zorzi-13348524a/" target="_blank"><img src="../images/icon-logo-linkedin.png" alt="My LinkedIn"></a>
+        </li>
+        <!-- <li>
+          <a href="#" target="_blank"><img src="images/icon-logo-facebook.png" alt="My Facebook"></a>
+        </li>
+        <li>
+          <a href="#" target="_blank"><img src="images/icon-logo-youtube.png" alt="My YouTube"></a>
+        </li>
+        <li>
+          <a href="#" target="_blank"><img src="images/icon-logo-instagram.png" alt="My Instagram"></a>
+        </li> -->
+        <li>
+          <a href="https://zorzini.itch.io/" target="_blank"><img src="../images/icon-logo-itchio.png" alt="My Itch.io"></a>
+        </li>
+      </ul>
+      <!-- End content edits here. -->
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects | Nicolas Zorzi | Digital Media Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- use an import map to link to the Three.js CDN -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <!-- Link to your Javascript file as a type="module", this will execute the file after the HTML is loaded -->
+    <script type="module" src="../js/main.js"></script>
+
+  </head>
+
+  <body>
+    <ul id="navbar">
+      <li class="nav"><a href="../index.html">Home</a></li>
+      <!-- <li class="nav"><a href="projects/index.html">Projects</a></li> -->
+      <li class="nav"><a href="index.html">Coding</a></li>
+      <li class="nav"><a href="../3d/index.html">3D Modeling</a></li>
+      <li class="nav"><a href="../digitalvideo/index.html">Digital Video</a></li>
+      <li class="nav"><a href="../makerfaire/index.html">Maker Faire</a></li>
+    </ul>
+  </body>
+
+  <body class="resume">
+
+    <div id="three-container">
+
+    </div>
+
+    <!-- <a class="btn download-link" ref="#">Download PDF</a> -->
+
+    <div class="content-wrapper" id="front-page">
+      <div class="content-bg" id="main-title">
+        <header>
+          <h1 class="yellow">Coding Projects</h1>
+          <p>Utilizing coding in order to create an interactive and engaging experience.</p>
+        </header>
+      </div>
+    </div>
+
+    <div class="content-wrapper" id="last-section">
+      <div class="content-bg" id="main-title">
+        <section class="resume-section">
+          <h2 class="yellow">Video Games</h2>
+          <p>Made with Unity and C#, playable on Itch.io through WebGL or in a HTML website using CSS and Javascript.</p>
+  
+          <div class="project-wrapper">
+            <section class="project-item">
+              <img src="../images/DevilsAcre.png" alt="Devil's Acre Title" width="1200px" height="">
+              <h3 class="yellow"><i>Devil's Acre</i>, 2023, Art/CS 108</h3>
+              <p>Play the western and paranormal top down shooter known as Devil's Acre. Join the adventure of a lone wanderer in a search to slay the demon who cursed him. Make your way through the small desert town and defeat the outlaws and bandits in the Saloon. Gain coins and upgrade your arsenal in the Shop. And, finally face the great evil waiting in the Graveyard.</p>
+              <p>Team Members: Ben Beary, Alexander Price, & Daniel Perez-Gomez</p>
+              <a class="btn" href="https://zorzini.itch.io/devils-acre" target="_blank">Play</a>
+              <a class="btn" href="https://zorzini.itch.io/devils-acre/devlog" target="_blank">Devlog</a>
+            </section>
+  
+            <section class="project-item">
+              <img src="../images/DeathTides.png" alt="Death Tides Title" width="1200px" height="">
+              <h3 class="yellow"><i>Death Tides</i>, 2024, SJSU Game Dev Club Summer Game Jam</h3>
+              <p>Save yourself, not the world! The zombie apocolypse is rampant on the island, search for supply drops to colect items and repair the escape boat. Be Careful! Zombies are not the only thing after you...</p>
+              <p>Team Members: Ben Beary</p>
+              <a class="btn" href="https://benbeary.itch.io/death-tides" target="_blank">Play</a>
+              <a class="btn" href="https://itch.io/jam/sjsu-summer-game-jam/rate/2858898" target="_blank">Game Jam</a>
+            </section>
+          </div>
+
+          <div class="project-wrapper">
+            <section class="project-item">
+              <img src="../images/MultilingualDilemma.png" alt="Multilingual Dilemma Title" width="1200px" height="">
+              <h3 class="yellow"><i>Multilingual Dilemma</i>, 2024, Art 109</h3>
+              <p>I created a website using HTML CSS and Javascript to tell the story of my linguistic background in an interactive game with 3 levels/pages. I strategically break the 3 languages into their own levels/pages in order to highlight them individually and to increase the difficulty over time. I use Javascript to create the gameplay loop and buttons, while I use CSS to style and add animations.</p>
+              <a class="btn" href="#" target="_blank">Play</a>
+            </section>
+  
+            <section class="project-item">
+              <img src="../images/SoundBounce.png" alt="Sound Bounce Title" width="1200px" height="">
+              <h3 class="yellow"><i>Sound Bounce</i>, 2023, Art 106</h3>
+              <p>This project uses 4 libraries (Sound Library, Scenemanager, p5play, and p5buttons) and has 3 pages (Splash screen, game, help page). Specifically, I used p5play to make the pinball game and used p5buttons to make the buttons for the gameplay and splash screen.</p>
+              <a class="btn" href="#" target="_blank">Play</a>
+            </section>
+          </div>
+        </section>
+      </div>
+    </div>
+
+
+    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+    <footer class="project">
+      <!-- Start content edits below this line. -->
+      <p>© 2023 by Nicolas Zorzi | <a href="mailto:nicolas.zorzi@sjsu.edu">nicolas.zorzi@sjsu.edu</a></p>
+
+      <!-- Add or remove any networks. -->
+      <ul class="socials">
+        <!-- <li>
+          <a href="#" target="_blank"><img src="images/icon-logo-twitter.png" alt="My Twitter"></a>
+        </li> -->
+        <li>
+          <a href="https://www.linkedin.com/in/nicolas-zorzi-13348524a/" target="_blank"><img src="../images/icon-logo-linkedin.png" alt="My LinkedIn"></a>
+        </li>
+        <!-- <li>
+          <a href="#" target="_blank"><img src="images/icon-logo-facebook.png" alt="My Facebook"></a>
+        </li>
+        <li>
+          <a href="#" target="_blank"><img src="images/icon-logo-youtube.png" alt="My YouTube"></a>
+        </li>
+        <li>
+          <a href="#" target="_blank"><img src="images/icon-logo-instagram.png" alt="My Instagram"></a>
+        </li> -->
+        <li>
+          <a href="https://zorzini.itch.io/" target="_blank"><img src="../images/icon-logo-itchio.png" alt="My Itch.io"></a>
+        </li>
+      </ul>
+      <!-- End content edits here. -->
+    </footer>
+  </body>
+</html>

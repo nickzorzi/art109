@@ -7,6 +7,22 @@ CSS HEX
 --bistre: #2b2118ff;
 */
 
+/* CSS HEX
+--oxford-blue: #000022ff;
+--penn-blue: #001242ff;
+--blue-ncs: #0094c6ff;
+--lapis-lazuli: #005e7cff;
+--rich-black: #040f16ff;
+*/
+
+/* CSS HEX
+--white: #fcfcfcff;
+--picton-blue: #4ea5d9ff;
+--yellow: #f6f930ff;
+--jet: #2f2f2fff;
+--black: #000000ff;
+*/
+
 /* 
   https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
@@ -55,24 +71,24 @@ h3 {
 }
 
 a {
-    color: #6f1a07ff;
+    color: #4ea5d9ff;
     /*text-shadow: 1px 1px 2px #000000;*/
 }
 a:hover {
-    color: #af9164ff;
+    color: #f6f930ff;
     text-decoration: none;
 }
 footer a {
-    color: #f7f3e3ff;
+    color: white;
 
 }
 footer a:hover {
-    color: #b3b6b7ff;
+    color: #4ea5d9ff;
     text-decoration: none;
 }
 .btn {
-    background: #6f1a07ff;
-    color: #f7f3e3ff;
+    background: #4ea5d9ff;
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.2rem;
@@ -87,6 +103,35 @@ footer a:hover {
     margin: 0 auto;
     padding: 30px;
     max-width: 900px;
+}
+
+.content-wrapper, #front-page {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+    color: white;
+    text-align: center;
+    margin-top: 45px;
+    text-shadow: 2px 2px 6px #000000;
+}
+
+.content-wrapper, #project-page {
+    margin: 0 auto;
+    padding: 5px;
+    max-width: 95vw;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 6px #000000;
+}
+
+.content-wrapper, #last-section {
+    margin: 0 auto;
+    padding: 5px;
+    max-width: 95vw;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 6px #000000;
+    margin-bottom: 25px;
 }
 
 .content-wrapper-resume {
@@ -109,6 +154,20 @@ footer a:hover {
     background: rgb(255 255 255 / 0.9);
     padding: 30px;
 }
+
+.blue {
+    color: #4ea5d9ff;
+}
+
+.yellow {
+    color: #f6f930ff;
+}
+
+.content-bg, #main-title {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+}
+
 @media screen and (max-width:650px) {
     .home .content-wrapper {
         padding: 10px;
@@ -118,16 +177,16 @@ footer a:hover {
     }
 }
 
-.resume header::before {
+/* .resume header::before {
     background: url(../images/PuntoFaro.jpg) center;
     background-size: cover;
     content: "";
     display: block;
     height: 375px;
-}
+} */
 
 .resume-section {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     color: white;
     text-shadow: 2px 2px 4px #000000;
 }
@@ -157,6 +216,12 @@ footer a:hover {
     h2 {
         font-size: 1.6rem;
     }
+}
+
+.project-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
 }
 
 .project-item {
@@ -216,9 +281,23 @@ footer a:hover {
 }
 
 footer {
-    background: #2b2118ff;
-    color: #af9164ff;
+    background: #2f2f2fff;
+    color: #f6f930ff;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    bottom: 0;
 }
+
+.project {
+    background: #2f2f2fff;
+    color: #f6f930ff;
+    position: static;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+}
+
 .socials {
     list-style-type: none;
     padding: 0;
@@ -254,7 +333,7 @@ footer {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #2b2118ff;
+    background-color: #2f2f2fff;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -273,5 +352,49 @@ footer {
 }
   
 .nav a:hover {
-    background-color: #111;
+    background-color: #4ea5d9ff;
+}
+
+/* image slideshow */
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+  
+.mySlides {
+    display: none;
+}
+
+.text {
+    color: white;
+    font-size: 24px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    /* text-shadow: 2px 2px 6px #000000; */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+  
+.numbertext {
+    color: white;
+    font-size: 24px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    /* text-shadow: 2px 2px 6px #000000; */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
