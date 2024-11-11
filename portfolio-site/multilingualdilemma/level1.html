@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+        
+    </div>
+
+    <div class="pop-up hidden" id="warning-text">
+        <p>Complete it in order!</p>
+    </div>
+
+    <div class="pop-up hidden" id="next-text">
+        <p>Good job! Now respond</p>
+    </div>
+
+    <div class="pop-up hidden" id="end-text">
+        <p>Bravo! You passed Level 1</p>
+    </div>
+    
+    <div class="game-page">
+        <main class="content-wrapper">
+            <div class="phrase" id="line1">
+                <p class="clump1">Vuoi</p>
+                <p class="clump2">un gelato?</p>
+            </div>
+    
+            <div class="phrase" id="line2">
+                <p class="clump1 hidden" id="clump1-translate">Do you want</p>
+                <p class="clump2 hidden" id="clump2-translate">an ice cream?</p>
+            </div>
+
+            <div class="phrase transparent" id="line3">
+                <p class="clump3">Yes,</p>
+                <p class="clump4">I want it</p>
+            </div>
+
+            <div class="phrase transparent" id="line4">
+                <p class="clump3 hidden" id="clump3-translate">Si,</p>
+                <p class="clump4 hidden" id="clump4-translate">lo voglio</p>
+            </div>
+        </main>
+        <section class="content-wrapper">
+            <img id="image-animate" src="images/italy-flag.png" alt="Italian Flag" width="220">
+        </section>
+    </div>
+
+    <section class="desc">
+        <a href="index.html">Return to Home Page</a>
+    </section>
+
+    <script src="js/level1.js"></script>
+</body>
+
+</html>

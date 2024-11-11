@@ -224,6 +224,11 @@ footer a:hover {
     column-gap: 20px;
 }
 
+.single-row {
+    display: grid;
+    column-gap: 20px;
+}
+
 .project-item {
     margin: 30px 0;
 }
@@ -257,7 +262,12 @@ footer a:hover {
 }
 
 .work-item {
-    margin: 30px 0;
+    /* margin: 30px 0; */
+    text-align: center;
+}
+
+.work-summary {
+    text-align: left;
 }
 .work-details p {
     margin: 0;
@@ -337,12 +347,16 @@ footer {
     position: fixed;
     top: 0;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
   
 .nav {
-    float: left;
+    /* float: left; */
+    display: flex;
 }
-  
+
 .nav a {
     display: block;
     color: white;
@@ -353,6 +367,18 @@ footer {
   
 .nav a:hover {
     background-color: #4ea5d9ff;
+}
+
+#navbar .nav:first-child {
+    margin-right: auto;
+}
+
+#navbar .nav:last-child {
+    margin-left: 10px;
+}
+
+#navbar .nav:nth-last-child(2) {
+    margin-left: auto;
 }
 
 /* image slideshow */

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maker Faire | Nicolas Zorzi | Digital Media Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- use an import map to link to the Three.js CDN -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <!-- Link to your Javascript file as a type="module", this will execute the file after the HTML is loaded -->
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/slideshow.js"></script>
+
+  </head>
+
+  <body>
+    <ul id="navbar">
+      <li class="nav"><a href="../index.html">Home</a></li>
+      <!-- <li class="nav"><a href="projects/index.html">Projects</a></li> -->
+      <li class="nav"><a href="../coding/index.html">Coding</a></li>
+      <li class="nav"><a href="../3d/index.html">3D Modeling</a></li>
+      <li class="nav"><a href="../digitalvideo/index.html">Digital Video</a></li>
+      <li class="nav"><a href="index.html">Maker Faire</a></li>
+      <li class="nav"><a href="../aboutme/index.html">About</a></li>
+      <li class="nav"><a href="../cv/index.html">CV</a></li>
+    </ul>
+  </body>
+
+  <body class="home">
+
+    <div id="three-container">
+
+    </div>
+
+    <!-- <a class="btn download-link" ref="#">Download PDF</a> -->
+
+    <div class="content-wrapper" id="front-page">
+      <div class="content-bg" id="main-title">
+        <header>
+          <h1 class="yellow">Maker Faire Bay Area</h1>
+          <p>October 18-20, 2024, Vallejo, CA.</p>
+        </header>
+      </div>
+    </div>
+
+    <div class="content-wrapper" id="last-section">
+      <div class="content-bg" id="main-title">
+        <section class="resume-section">
+          <h2 class="yellow"><i>Blot Room</i>, 2024, CADRE SO</I></h2>
+          <p>SJSU Digital Media Art Club, CADRE SO, presented their group exhibition at the Maker Faire Bay Area. I exhibited two of my works in the <i>Blot Room</i> along side fellow club members and officers.</p>
+  
+          <div class="project-wrapper">
+            <section class="project-item">
+                <img src="../images/blot-room.png" alt="Blot Room Title" width="1200px" height="">
+                <h3 class="yellow"><i>BLOT ROOM - MAKER FAIRE 2024 RECAP</i>, 2024</h3>
+                <p>This is a recap video for the <i>Blot Room</i> exhibition, showing the various works and interaction with the public. I feature throughout the video demonstrating the <i>Micro Preform</i> project and the video game <a href="../coding/index.html"><i>Devil's Acre</i></a>.</p>
+                <a class="btn" href="https://youtu.be/uqw4-k1e3B0?si=_RDfiGAIzsOhuqLj" target="_blank">Watch Now</a>
+              </section>
+
+            <section class="project-item">
+
+              <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <img src="../images/MicroPerform.png" width="1200px">
+                </div>
+
+                <div class="mySlides fade">
+                  <img src="../images/micro1.png" width="1200px">
+                </div>
+
+                <div class="mySlides fade">
+                  <img src="../images/micro2.png" width="1200px">
+                </div>
+
+                <div class="mySlides fade">
+                  <img src="../images/micro3.png" width="1200px">
+                </div>
+              </div>
+
+              <!-- <img src="../images/MicroPerform.png" alt="Micro Perform Title" width="1200px" height=""> -->
+              <h3 class="yellow"><i>Micro Perfrom</i>, 2024, Art 106</h3>
+              <p>Using the Raspberry Pi Pico board, I created an interactive and engaging sound maker. The project is housed in a found object, cardboard box, where buttons and inputs are installed on the top side, the speaker is installed on top, combined with a 3d printed amplifier cone, photocells are installed on the back, amplifier knob extends out on the right. It utilizes the arduino software to play and modulate (tempo, octave, note length, and track playing) 4 total midi tracks from both Paganini and Bach through the analog and digital inputs, while lighting 2 LEDs for light level, and 1 for tempo and status.</p>
+              <!-- <a class="btn" href="https://youtu.be/uqw4-k1e3B0?si=_RDfiGAIzsOhuqLj" target="_blank">Watch Now</a> -->
+            </section>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+    <footer>
+      <!-- Start content edits below this line. -->
+      <p>© 2023 by Nicolas Zorzi | <a href="mailto:nicolas.zorzi@sjsu.edu">nicolas.zorzi@sjsu.edu</a></p>
+
+      <!-- Add or remove any networks. -->
+      <ul class="socials">
+        <!-- <li>
+          <a href="#" target="_blank"><img src="images/icon-logo-twitter.png" alt="My Twitter"></a>
+        </li> -->
+        <li>
+          <a href="https://www.linkedin.com/in/nicolas-zorzi-13348524a/" target="_blank"><img src="../images/icon-logo-linkedin.png" alt="My LinkedIn"></a>
+        </li>
+        <!-- <li>
+          <a href="#" target="_blank"><img src="images/icon-logo-facebook.png" alt="My Facebook"></a>
+        </li>
+        <li>
+          <a href="#" target="_blank"><img src="images/icon-logo-youtube.png" alt="My YouTube"></a>
+        </li>
+        <li>
+          <a href="#" target="_blank"><img src="images/icon-logo-instagram.png" alt="My Instagram"></a>
+        </li> -->
+        <li>
+          <a href="https://zorzini.itch.io/" target="_blank"><img src="../images/icon-logo-itchio.png" alt="My Itch.io"></a>
+        </li>
+      </ul>
+      <!-- End content edits here. -->
+    </footer>
+  </body>
+</html>
