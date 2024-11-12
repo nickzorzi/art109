@@ -73,6 +73,7 @@ h3 {
 a {
     color: #4ea5d9ff;
     /*text-shadow: 1px 1px 2px #000000;*/
+    font-size: 1em;
 }
 a:hover {
     color: #f6f930ff;
@@ -226,6 +227,12 @@ footer a:hover {
     h2 {
         font-size: 1.6rem;
     }
+    h3 {
+        font-size: 1.2em;
+    }
+    p {
+        font-size: 0.8em;
+    }
 }
 
 .project-wrapper {
@@ -245,7 +252,7 @@ footer a:hover {
 .project-item img {
     width: 400px;
 }
-@media screen and (min-width:860px) {
+/* @media screen and (min-width:860px) {
     .project-item {
         display: flow-root;
     }
@@ -263,8 +270,8 @@ footer a:hover {
     .project-item img {
         width: 100%;
     }
-}
-@media screen and (max-width:500px) {
+} */
+@media screen and (max-width:860px) {
     .project-item img {
         width: 100%;
         margin-bottom: 10px;
@@ -399,10 +406,26 @@ footer {
         padding: 14px 16px;
         text-decoration: none;
     }
+
+    p {
+        font-size: 1em;
+    }
+    
+    a {
+        font-size: 1em;
+    }
 }
 @media screen and (max-width:499px) {
     .nav a {
-        padding: 7px 8px;
+        padding: 3px 4px;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    a {
+        font-size: 0.8em;
     }
 }
 
