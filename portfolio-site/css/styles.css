@@ -111,7 +111,17 @@ footer a:hover {
     max-width: 900px;
     color: white;
     text-align: center;
-    margin-top: 45px;
+    margin-top: 35px;
+    text-shadow: 2px 2px 6px #000000;
+}
+
+.content-wrapper, #about-page {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 1200px;
+    color: white;
+    text-align: center;
+    /* margin-top: 45px; */
     text-shadow: 2px 2px 6px #000000;
 }
 
@@ -324,14 +334,14 @@ footer {
 .socials img:hover {
     opacity: 0.5;
 }
-@media screen and (min-width:860px) {
+@media screen and (min-width:500px) {
     footer {
         display: flex;
         justify-content: space-between;
         padding: 0 20px;
     }
 }
-@media screen and (max-width:859px) {
+@media screen and (max-width:499px) {
     footer {
         text-align: center;
         padding: 10px;
@@ -369,7 +379,7 @@ footer {
     background-color: #4ea5d9ff;
 }
 
-#navbar .nav:first-child {
+/* #navbar .nav:first-child {
     margin-right: auto;
 }
 
@@ -379,6 +389,21 @@ footer {
 
 #navbar .nav:nth-last-child(2) {
     margin-left: auto;
+} */
+
+@media screen and (min-width:500px) {
+    .nav a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+}
+@media screen and (max-width:499px) {
+    .nav a {
+        padding: 7px 8px;
+    }
 }
 
 /* image slideshow */
