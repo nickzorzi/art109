@@ -30,7 +30,7 @@ function init() {
 
     //knot "cube"
     
-    const geometry = new THREE.TorusKnotGeometry( 10, 0.5, 450, 32 );
+    const geometry = new THREE.TorusKnotGeometry( 10, 0.5, 250, 32 );
     // material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
     // const texture = new THREE.TextureLoader().load('../textures/ice002_1K-JPG_Color.jpg');
     // const material = new THREE.MeshBasicMaterial({ map: texture });
@@ -44,7 +44,7 @@ function init() {
 
     //cube 2
 
-    const geometry3 = new THREE.TorusKnotGeometry( 15, 1, 600, 48, 2, 1 );
+    const geometry3 = new THREE.TorusKnotGeometry( 15, 1, 400, 48, 2, 1 );
     const material3 = new THREE.PointsMaterial({
         size: 0.01,
         color: '#f6f930'
@@ -57,7 +57,7 @@ function init() {
 
     //cube 3
 
-    const geometry4 = new THREE.TorusKnotGeometry( 20, 1.5, 750, 64, 4, 3 );
+    const geometry4 = new THREE.TorusKnotGeometry( 20, 1.5, 550, 64, 4, 3 );
     const material4 = new THREE.PointsMaterial({
         size: 0.01,
         color: '#4ea5d9'
@@ -84,7 +84,7 @@ function init() {
     //space particles
 
     const particlesGeometry = new THREE.BufferGeometry;
-    const particlesCnt = 50000;
+    const particlesCnt = 10000;
 
     const posArray = new Float32Array(particlesCnt * 3);
 
