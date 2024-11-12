@@ -251,7 +251,7 @@ footer a:hover {
 .project-item img {
     width: 400px;
 }
-@media screen and (min-width:1500px) {
+@media screen and (min-width:1300px) {
     .project-item {
         display: flow-root;
     }
@@ -260,7 +260,7 @@ footer a:hover {
         margin-right: 20px;
     }
 }
-@media screen and (min-width:650px) and (max-width:1499px) {
+@media screen and (min-width:650px) and (max-width:1299px) {
     .project-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
