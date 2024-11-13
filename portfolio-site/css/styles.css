@@ -152,7 +152,7 @@ footer a:hover {
 }
 
 .home {
-    background: url(../images/PuntoFaro.jpg) no-repeat;
+    /* background: url(../images/PuntoFaro.jpg) no-repeat; */
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -251,7 +251,7 @@ footer a:hover {
 .project-item img {
     width: 400px;
 }
-@media screen and (min-width:1500px) {
+@media screen and (min-width:1750px) {
     .project-item {
         display: flow-root;
     }
@@ -260,7 +260,7 @@ footer a:hover {
         margin-right: 20px;
     }
 }
-@media screen and (min-width:650px) and (max-width:1499px) {
+@media screen and (min-width:650px) and (max-width:1749px) {
     .project-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -441,7 +441,7 @@ footer {
 /* image slideshow */
 
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 500px;
     position: relative;
     margin: auto;
 }
