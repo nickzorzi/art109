@@ -269,6 +269,13 @@ footer a:hover {
     .project-item img {
         width: 30%;
     }
+    .content-wrapper, #about-page {
+        padding: 5px;
+        max-width: 900px;
+    }
+    .content-wrapper {
+        padding-bottom: 0;
+    }
 }
 @media screen and (max-width:860px) {
     .project-item img {
@@ -309,7 +316,7 @@ footer a:hover {
 footer {
     background: #2f2f2fff;
     color: #f6f930ff;
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     width: 100%;
     bottom: 0;
@@ -352,7 +359,7 @@ footer {
         display: flex;
         justify-content: space-between;
         padding: 0 20px;
-        position: fixed;
+        /* position: fixed; */
     }
 }
 @media screen and (max-width:499px) {
@@ -374,6 +381,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 999;
 }
   
 .nav {
