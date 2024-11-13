@@ -317,6 +317,7 @@ footer {
     background: #2f2f2fff;
     color: #f6f930ff;
     /* position: fixed; */
+    position: static;
     left: 0;
     width: 100%;
     bottom: 0;
