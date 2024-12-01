@@ -41,7 +41,7 @@ let cnv;
 
 
 function setup() {
-let cnv  =  createCanvas(800, 800);
+let cnv  =  createCanvas(1280, 720);
   //  console.log(hell);
   angleMode(DEGREES);
   cnv.mousePressed(setupSound); // callback function
