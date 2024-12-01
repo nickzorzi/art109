@@ -11,9 +11,11 @@ let bg;
 
 let player1, player2;
 let floor;
-let platform1, platform2, platform3, platform4, platform5, platform6, platform7, platform8, platform9;
-let wall1, wall2, wall3, wall4;
-let button1, button2, button3;
+let platform1, platform2, platform3, platform4, platform5, platform6, platform7, platform8, platform9, platform10, platform11, platform12;
+let wall1, wall2, wall3, wall4, wall5, wall6;
+let button1, button2, button3, button4, button5, button6, button7, button8;
+let box;
+let spikes1, spikes2, spikes3, spikes4, spikes5, spikes6, spikes7, spikes8, spikes9, spikes10;
 
 ////////////////////////////// 1 /////////////////
 
@@ -128,6 +130,12 @@ function scene2()  {
       player2.color = 'white';
       player2.rotationLock = true;
 
+      box = new Sprite(715, 180);
+      box.w = 25;
+      box.h = 25;
+      box.color = 'grey';
+      box.rotationLock = true;
+
       button1 = new Sprite();
 	   button1.y = 700;
       button1.x = 600;
@@ -137,7 +145,7 @@ function scene2()  {
       button1.color = 'red';
 
       button2 = new Sprite();
-	   button2.y = 516;
+	   button2.y = 476;
       button2.x = 100;
 	   button2.w = 75;
 	   button2.h = 10;
@@ -145,15 +153,74 @@ function scene2()  {
       button2.color = 'blue';
 
       button3 = new Sprite();
-	   button3.y = 402;
-      button3.x = 710;
+	   button3.y = 332;
+      button3.x = 730;
 	   button3.w = 75;
 	   button3.h = 10;
 	   button3.collider = 'static';
       button3.color = 'green';
 
+      button4 = new Sprite();
+	   button4.y = 277;
+      button4.x = 100;
+	   button4.w = 75;
+	   button4.h = 10;
+	   button4.collider = 'static';
+      button4.color = 'yellow';
+
+      button5 = new Sprite();
+	   button5.y = 277;
+      button5.x = 1180;
+	   button5.w = 75;
+	   button5.h = 10;
+	   button5.collider = 'static';
+      button5.color = 'orange';
+
+      button6 = new Sprite();
+	   button6.y = 277;
+      button6.x = 823;
+	   button6.w = 75;
+	   button6.h = 10;
+	   button6.collider = 'static';
+      button6.color = 'purple';
+
+      // spikes1 = new Sprite([[780, 480], [1280, 480], [1230, 460], [1180, 480], [1130, 460], [1080, 480], [1030, 460], [980, 480], [930, 460], [880, 480], [830, 460], [780, 480]]);
+      // spikes1.collider = 'static';
+      // spikes1.color = 'grey';
+
+      spikes1 = new Sprite([[780, 480], [830, 480], [805, 460], [780, 480]]);
+      spikes1.collider = 'static';
+      spikes1.color = 'grey';
+      spikes2 = new Sprite([[830, 480], [880, 480], [855, 460], [830, 480]]);
+      spikes2.collider = 'static';
+      spikes2.color = 'grey';
+      spikes3 = new Sprite([[880, 480], [930, 480], [905, 460], [880, 480]]);
+      spikes3.collider = 'static';
+      spikes3.color = 'grey';
+      spikes4 = new Sprite([[930, 480], [980, 480], [955, 460], [930, 480]]);
+      spikes4.collider = 'static';
+      spikes4.color = 'grey';
+      spikes5 = new Sprite([[980, 480], [1030, 480], [1005, 460], [980, 480]]);
+      spikes5.collider = 'static';
+      spikes5.color = 'grey';
+      spikes6 = new Sprite([[1030, 480], [1080, 480], [1055, 460], [1030, 480]]);
+      spikes6.collider = 'static';
+      spikes6.color = 'grey';
+      spikes7 = new Sprite([[1080, 480], [1130, 480], [1105, 460], [1080, 480]]);
+      spikes7.collider = 'static';
+      spikes7.color = 'grey';
+      spikes8 = new Sprite([[1130, 480], [1180, 480], [1155, 460], [1130, 480]]);
+      spikes8.collider = 'static';
+      spikes8.color = 'grey';
+      spikes9 = new Sprite([[1180, 480], [1230, 480], [1205, 460], [1180, 480]]);
+      spikes9.collider = 'static';
+      spikes9.color = 'grey';
+      spikes10 = new Sprite([[1230, 480], [1280, 480], [1255, 460], [1230, 480]]);
+      spikes10.collider = 'static';
+      spikes10.color = 'grey';
+
       platform1 = new Sprite();
-	   platform1.y = 520;
+	   platform1.y = 480;
       platform1.x = 140;
 	   platform1.w = 300;
 	   platform1.h = 5;
@@ -161,7 +228,7 @@ function scene2()  {
       platform1.color = 'grey';
 
       platform2 = new Sprite();
-	   platform2.y = 520;
+	   platform2.y = 480;
       platform2.x = 400;
 	   platform2.w = 100;
 	   platform2.h = 5;
@@ -169,7 +236,7 @@ function scene2()  {
       platform2.color = 'grey';
 
       platform3 = new Sprite();
-	   platform3.y = 520;
+	   platform3.y = 480;
       platform3.x = 580;
 	   platform3.w = 140;
 	   platform3.h = 5;
@@ -177,7 +244,7 @@ function scene2()  {
       platform3.color = 'grey';
 
       platform4 = new Sprite();
-	   platform4.y = 407;
+	   platform4.y = 337;
       platform4.x = 715;
 	   platform4.w = 140;
 	   platform4.h = 5;
@@ -185,44 +252,52 @@ function scene2()  {
       platform4.color = 'grey';
 
       platform5 = new Sprite();
-	   platform5.y = 120;
-      platform5.x = 560;
+	   platform5.y = 100;
+      platform5.x = 480;
 	   platform5.w = 100;
 	   platform5.h = 5;
 	   platform5.collider = 'k';
       platform5.color = 'grey';
 
       platform6 = new Sprite();
-	   platform6.y = 320;
-      platform6.x = 220;
-	   platform6.w = 460;
+	   platform6.y = 280;
+      platform6.x = 180;
+	   platform6.w = 360;
 	   platform6.h = 5;
 	   platform6.collider = 'static';
       platform6.color = 'grey';
 
       platform7 = new Sprite();
-	   platform7.y = 320;
-      platform7.x = 1020;
-	   platform7.w = 460;
+	   platform7.y = 280;
+      platform7.x = 1200;
+	   platform7.w = 140;
 	   platform7.h = 5;
 	   platform7.collider = 'static';
       platform7.color = 'grey';
 
       platform8 = new Sprite();
-	   platform8.y = 420;
-      platform8.x = 1020;
-	   platform8.w = 460;
+	   platform8.y = 207;
+      platform8.x = 715;
+	   platform8.w = 140;
 	   platform8.h = 5;
 	   platform8.collider = 'static';
       platform8.color = 'grey';
 
       platform9 = new Sprite();
-	   platform9.y = 520;
-      platform9.x = 1020;
-	   platform9.w = 460;
+	   platform9.y = 280;
+      platform9.x = 830;
+	   platform9.w = 100;
 	   platform9.h = 5;
 	   platform9.collider = 'static';
       platform9.color = 'grey';
+
+      platform10 = new Sprite();
+	   platform10.y = 480;
+      platform10.x = 1030;
+	   platform10.w = 500;
+	   platform10.h = 5;
+	   platform10.collider = 'static';
+      platform10.color = 'grey';
       
       floor = new Sprite();
 	   floor.y = 710;
@@ -248,10 +323,10 @@ function scene2()  {
       wall2.color = 'grey';
 
       wall3 = new Sprite();
-      wall3.y = 575;
+      wall3.y = 525;
       wall3.x = 650;
 	   wall3.w = 10;
-	   wall3.h = 340;
+	   wall3.h = 375;
 	   wall3.collider = 'static';
       wall3.color = 'grey';
 
@@ -261,6 +336,14 @@ function scene2()  {
 	   wall4.h = 20;
 	   wall4.collider = 'static';
       wall4.color = 'grey';
+
+      wall5 = new Sprite();
+      wall5.y = 270;
+      wall5.x = 780;
+	   wall5.w = 10;
+	   wall5.h = 130;
+	   wall5.collider = 'static';
+      wall5.color = 'grey';
    }
    
    this.draw = function() {
@@ -272,7 +355,12 @@ function scene2()  {
       if (kb.pressing('a')) {
          player1.vel.x = -2;
       }
-      if (player1.colliding(floor) || player1.colliding(platform1) || player1.colliding(platform2) || player1.colliding(platform3) || player1.colliding(platform4) || player1.colliding(platform5) || player1.colliding(platform6) || player1.colliding(platform7) || player1.colliding(platform8) || player1.colliding(platform9)) {
+      if (player1.colliding(floor) || player1.colliding(player2) || player1.colliding(platform1) || player1.colliding(platform3) || player1.colliding(platform4) || player1.colliding(platform6) || player1.colliding(platform7) || player1.colliding(platform8) || player1.colliding(platform9)) {
+         if (kb.pressing('w') && player1.velocity.y === 0) {
+            player1.vel.y = -6;
+         }
+      }
+      if (player1.colliding(platform2) || player1.colliding(platform5)) {
          if (kb.pressing('w')) {
             player1.vel.y = -6;
          }
@@ -284,33 +372,58 @@ function scene2()  {
       if (kb.pressing('ArrowLeft')) {
          player2.vel.x = -2;
       }
-      if (player2.colliding(floor) || player2.colliding(platform1) || player2.colliding(platform2) || player2.colliding(platform3) || player2.colliding(platform4) || player2.colliding(platform5) || player2.colliding(platform6) || player2.colliding(platform7) || player2.colliding(platform8) || player2.colliding(platform9)) {
+      if (player2.colliding(floor) || player2.colliding(player1) || player2.colliding(platform1) || player2.colliding(platform3) || player2.colliding(platform4) || player2.colliding(platform6) || player2.colliding(platform7) || player2.colliding(platform8) || player2.colliding(platform9)) {
+         if (kb.pressing('ArrowUp') && player2.velocity.y === 0) {
+            player2.vel.y = -6;
+         }
+      }
+      if (player2.colliding(platform2) || player2.colliding(platform5)) {
          if (kb.pressing('ArrowUp')) {
             player2.vel.y = -6;
          }
       }
 
+      if (player1.colliding(wall1) || player1.colliding(wall2) || player1.colliding(wall3) || player1.colliding(wall4) || player1.colliding(wall5)) {
+         player1.vel.y = 0;
+      }
+
+      if (player2.colliding(wall1) || player2.colliding(wall2) || player2.colliding(wall3) || player2.colliding(wall4) || player2.colliding(wall5)) {
+         player2.vel.y = 0;
+      }
+
       if (player1.colliding(button2) || player2.colliding(button1)) {
-         platform2.vel.y = 1;
+         platform2.vel.y = 2;
          if (platform2.position.y >= 610) {
             platform2.vel.y = 0;
          }
       } else {
-         platform2.vel.y = -1;
-         if (platform2.position.y <= 520) {
+         platform2.vel.y = -2;
+         if (platform2.position.y <= 480) {
             platform2.vel.y = 0;
          }
       }
 
       if (player1.colliding(button3)) {
-         platform5.vel.y = 1;
+         platform5.vel.y = 2;
          if (platform5.position.y >= 370) {
-            platform5.vel.y = 0;
+             platform5.vel.y = 0;
+         }
+     } else {
+         platform5.vel.y = -2;
+         if (platform5.position.y <= 100) {
+             platform5.vel.y = 0;
+         }
+     }
+
+      if (player1.colliding(button4) || player2.colliding(button5)) {
+         platform5.vel.x = 2;
+         if (platform5.position.x >= 1180) {
+            platform5.vel.x = 0;
          }
       } else {
-         platform5.vel.y = -1;
-         if (platform5.position.y <= 120) {
-            platform5.vel.y = 0;
+         platform5.vel.x = -2;
+         if (platform5.position.x <= 480) {
+            platform5.vel.x = 0;
          }
       }
    }
