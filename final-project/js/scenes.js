@@ -28,6 +28,62 @@ function intro()  {
    this.enter = function() {
       title.visible = true;
       bg.visible = true;
+
+      if (wall1) {
+         box.visible = false;
+         pin1.visible = false;
+         home.visible = false;
+         floor.visible = false;
+         player1.visible = false;
+         player2.visible = false;
+         platform1.visible = false;
+         platform2.visible = false;
+         platform3.visible = false;
+         platform4.visible = false;
+         platform5.visible = false;
+         platform6.visible = false;
+         platform7.visible = false;
+         platform8.visible = false;
+         platform9.visible = false;
+         platform10.visible = false;
+         platform11.visible = false;
+         platform12.visible = false;
+         platform13.visible = false;
+         platform14.visible = false;
+         platform15.visible = false;
+         platform16.visible = false;
+         spikes1.visible = false;
+         spikes2.visible = false;
+         spikes3.visible = false;
+         spikes4.visible = false;
+         spikes5.visible = false;
+         spikes6.visible = false;
+         spikes7.visible = false;
+         spikes8.visible = false;
+         spikes9.visible = false;
+         spikes10.visible = false;
+         spikes11.visible = false;
+         spikes12.visible = false;
+         spikes13.visible = false;
+         spikes14.visible = false;
+         spikes15.visible = false;
+         spikes16.visible = false;
+         button1.visible = false;
+         button2.visible = false;
+         button3.visible = false;
+         button4.visible = false;
+         button5.visible = false;
+         button6.visible = false;
+         button7.visible = false;
+         button8.visible = false;
+         wall1.visible = false;
+         wall2.visible = false;
+         wall3.visible = false;
+         wall4.visible = false;
+         wall5.visible = false;
+         wall6.visible = false;
+         wall7.visible = false;
+      }
   }
 
     this.setup = function() {
@@ -41,13 +97,13 @@ function intro()  {
       title = loadImage("assets/title.png");
 
       playButton = new Button({
-         x: 400,	y: 600,
+         x: 640,	y: 400,
          width: 150,		height: 50,
          align_x: 0,		align_y: 0,
          content: 'PLAY',
          style_default: {
             color: '#fff',
-            background: '#a29bfe',
+            background: '#808080',
             text_size: 36,
             text_font: 'sans-serif',
             border_width: 0,
@@ -56,7 +112,7 @@ function intro()  {
          },
          style_pressed: {
             color: '#fff',
-            background: '#6c5ce7',
+            background: '#808080',
             text_size: 36,
             text_font: 'sans-serif',
             border_width: 0,
@@ -77,8 +133,8 @@ function intro()  {
       
       image(title, 0, 0);
       
-      fill(255);
-      ellipse(500,250,75,75);
+      // fill(255);
+      // ellipse(500,250,75,75);
       
       playButton.draw();
     }
@@ -115,6 +171,63 @@ function scene2()  {
    this.enter = function() {
       title.visible = false;
       bg.visible = false;
+      // help.visible = false;
+
+      // if (wall1) {
+         box.visible = true;
+         pin1.visible = true;
+         home.visible = true;
+         floor.visible = true;
+         player1.visible = true;
+         player2.visible = true;
+         platform1.visible = true;
+         platform2.visible = true;
+         platform3.visible = true;
+         platform4.visible = true;
+         platform5.visible = true;
+         platform6.visible = true;
+         platform7.visible = true;
+         platform8.visible = true;
+         platform9.visible = true;
+         platform10.visible = true;
+         platform11.visible = true;
+         platform12.visible = true;
+         platform13.visible = true;
+         platform14.visible = true;
+         platform15.visible = true;
+         platform16.visible = true;
+         spikes1.visible = true;
+         spikes2.visible = true;
+         spikes3.visible = true;
+         spikes4.visible = true;
+         spikes5.visible = true;
+         spikes6.visible = true;
+         spikes7.visible = true;
+         spikes8.visible = true;
+         spikes9.visible = true;
+         spikes10.visible = true;
+         spikes11.visible = true;
+         spikes12.visible = true;
+         spikes13.visible = true;
+         spikes14.visible = true;
+         spikes15.visible = true;
+         spikes16.visible = true;
+         button1.visible = true;
+         button2.visible = true;
+         button3.visible = true;
+         button4.visible = true;
+         button5.visible = true;
+         button6.visible = true;
+         button7.visible = true;
+         button8.visible = true;
+         wall1.visible = true;
+         wall2.visible = true;
+         wall3.visible = true;
+         wall4.visible = true;
+         wall5.visible = true;
+         wall6.visible = true;
+         wall7.visible = true;
+      // }
   }
 
    this.setup = function() {
@@ -460,7 +573,7 @@ function scene2()  {
    }
    
    this.draw = function() {
-      background('#6c5ce7');
+      background('#404040');
 
       if (kb.pressing('d')) {
          player1.vel.x = 2;
@@ -576,18 +689,275 @@ function scene2()  {
          }
       }
 
-      spikes3.overlaps(platform13);
-      spikes4.overlaps(platform13);
-      spikes5.overlaps(platform13);
-      spikes6.overlaps(platform13);
+      spikes3.overlaps(platform12);
+      spikes4.overlaps(platform12);
+      spikes5.overlaps(platform12);
+      spikes6.overlaps(platform12);
       // platform10.overlaps(platform13);
 
       if (player1.colliding(home) & player2.colliding(home)) {
-         this.sceneManager.showNextScene();
+         mgr.showScene(winscene, true);
+      }
+
+      if (player1.colliding(spikes1) || player1.colliding(spikes2) || player1.colliding(spikes3) || player1.colliding(spikes4) || player1.colliding(spikes5) || player1.colliding(spikes6) || player1.colliding(spikes7) || player1.colliding(spikes8) || player1.colliding(spikes9) || player1.colliding(spikes10)|| player1.colliding(spikes11) || player1.colliding(spikes12) || player1.colliding(spikes13) || player1.colliding(spikes14) || player1.colliding(spikes15) || player1.colliding(spikes16)) {
+         player1.remove();
+         player2.remove();
+         platform12.remove();
+         box.remove();
+
+         platform12 = new Sprite();
+	      platform12.y = 405;
+         platform12.x = 1050;
+	      platform12.w = 120;
+	      platform12.h = 5;
+         platform12.color = 'grey';
+
+         player1 = new Sprite(50, 700);
+         player1.w = 40;
+         player1.h = 40;
+         player1.color = 'black';
+         player1.rotationLock = true;
+         player1.mass = 2;
+
+         player2 = new Sprite(100, 700);
+         player2.w = 40;
+         player2.h = 40;
+         player2.color = 'white';
+         player2.rotationLock = true;
+         player2.mass = 2;
+
+         box = new Sprite(715, 180);
+         box.w = 25;
+         box.h = 25;
+         box.color = 'grey';
+         box.rotationLock = true;
+
+         mgr.showScene(losescene, true);
+      }
+
+      if (player2.colliding(spikes1) || player2.colliding(spikes2) || player2.colliding(spikes3) || player2.colliding(spikes4) || player2.colliding(spikes5) || player2.colliding(spikes6) || player2.colliding(spikes7) || player2.colliding(spikes8) || player2.colliding(spikes9) || player2.colliding(spikes10)|| player2.colliding(spikes11) || player2.colliding(spikes12) || player2.colliding(spikes13) || player2.colliding(spikes14) || player2.colliding(spikes15) || player2.colliding(spikes16)) {
+         player1.remove();
+         player2.remove();
+         platform12.remove();
+         box.remove();
+
+         platform12 = new Sprite();
+	      platform12.y = 405;
+         platform12.x = 1050;
+	      platform12.w = 120;
+	      platform12.h = 5;
+         platform12.color = 'grey';
+
+         player1 = new Sprite(50, 700);
+         player1.w = 40;
+         player1.h = 40;
+         player1.color = 'black';
+         player1.rotationLock = true;
+         player1.mass = 2;
+
+         player2 = new Sprite(100, 700);
+         player2.w = 40;
+         player2.h = 40;
+         player2.color = 'white';
+         player2.rotationLock = true;
+         player2.mass = 2;
+
+         box = new Sprite(715, 180);
+         box.w = 25;
+         box.h = 25;
+         box.color = 'grey';
+         box.rotationLock = true;
+
+         mgr.showScene(losescene, true);
       }
    }
 
   }
+
+/////////////////////////////        LOSE           //////////////////////////////////
+
+function losescene() {
+
+   this.setup = function()  {
+      console.log("Lose Scene Setup");
+      bg = loadImage("assets/bg.png");
+  }
+
+  this.enter = function() {
+   console.log("You Lost");
+
+   if (snd7.isPlaying()) {
+
+      snd7.pause(); // .play() will resume from .pause() position
+
+   } else {
+      snd7.play();
+
+   }
+
+   title.visible = false;
+   bg.visible = false;
+   box.visible = false;
+   pin1.visible = false;
+   home.visible = false;
+   floor.visible = false;
+   player1.visible = false;
+   player2.visible = false;
+   platform1.visible = false;
+   platform2.visible = false;
+   platform3.visible = false;
+   platform4.visible = false;
+   platform5.visible = false;
+   platform6.visible = false;
+   platform7.visible = false;
+   platform8.visible = false;
+   platform9.visible = false;
+   platform10.visible = false;
+   platform11.visible = false;
+   platform12.visible = false;
+   platform13.visible = false;
+   platform14.visible = false;
+   platform15.visible = false;
+   platform16.visible = false;
+   spikes1.visible = false;
+   spikes2.visible = false;
+   spikes3.visible = false;
+   spikes4.visible = false;
+   spikes5.visible = false;
+   spikes6.visible = false;
+   spikes7.visible = false;
+   spikes8.visible = false;
+   spikes9.visible = false;
+   spikes10.visible = false;
+   spikes11.visible = false;
+   spikes12.visible = false;
+   spikes13.visible = false;
+   spikes14.visible = false;
+   spikes15.visible = false;
+   spikes16.visible = false;
+   button1.visible = false;
+   button2.visible = false;
+   button3.visible = false;
+   button4.visible = false;
+   button5.visible = false;
+   button6.visible = false;
+   button7.visible = false;
+   button8.visible = false;
+   wall1.visible = false;
+   wall2.visible = false;
+   wall3.visible = false;
+   wall4.visible = false;
+   wall5.visible = false;
+   wall6.visible = false;
+   wall7.visible = false;
+
+   }
+
+   this.draw = function() {
+
+      image(bg, 0, 0);
+
+      textSize(26);
+      fill(0);
+      text("YOU",width/4,height/2);
+      fill(255);
+      text("LOST",width*0.75,height/2);
+   }
+
+}
+
+/////////////////////////////        WIN           //////////////////////////////////
+
+function winscene() {
+
+   this.setup = function()  {
+      console.log("Win Scene Setup");
+      bg = loadImage("assets/bg.png");
+  }
+
+  this.enter = function() {
+   console.log("You Win");
+
+   if (snd7.isPlaying()) {
+
+      snd7.pause(); // .play() will resume from .pause() position
+
+   } else {
+      snd7.play();
+
+   }
+
+   title.visible = false;
+   bg.visible = false;
+   box.visible = false;
+   pin1.visible = false;
+   home.visible = false;
+   floor.visible = false;
+   player1.visible = false;
+   player2.visible = false;
+   platform1.visible = false;
+   platform2.visible = false;
+   platform3.visible = false;
+   platform4.visible = false;
+   platform5.visible = false;
+   platform6.visible = false;
+   platform7.visible = false;
+   platform8.visible = false;
+   platform9.visible = false;
+   platform10.visible = false;
+   platform11.visible = false;
+   platform12.visible = false;
+   platform13.visible = false;
+   platform14.visible = false;
+   platform15.visible = false;
+   platform16.visible = false;
+   spikes1.visible = false;
+   spikes2.visible = false;
+   spikes3.visible = false;
+   spikes4.visible = false;
+   spikes5.visible = false;
+   spikes6.visible = false;
+   spikes7.visible = false;
+   spikes8.visible = false;
+   spikes9.visible = false;
+   spikes10.visible = false;
+   spikes11.visible = false;
+   spikes12.visible = false;
+   spikes13.visible = false;
+   spikes14.visible = false;
+   spikes15.visible = false;
+   spikes16.visible = false;
+   button1.visible = false;
+   button2.visible = false;
+   button3.visible = false;
+   button4.visible = false;
+   button5.visible = false;
+   button6.visible = false;
+   button7.visible = false;
+   button8.visible = false;
+   wall1.visible = false;
+   wall2.visible = false;
+   wall3.visible = false;
+   wall4.visible = false;
+   wall5.visible = false;
+   wall6.visible = false;
+   wall7.visible = false;
+
+   }
+
+   this.draw = function() {
+
+   image(bg, 0, 0);
+
+   textSize(26);
+   fill(0);
+   text("YOU",width/4,height/2);
+   fill(255);
+   text("WIN",width*0.75,height/2);
+
+   }
+
+}
   
 /////////////////////////////         END           //////////////////////////////////
 
@@ -616,6 +986,59 @@ function theend() {
    help.visible = true;
    title.visible = false;
    bg.visible = false;
+   box.visible = false;
+   pin1.visible = false;
+   home.visible = false;
+   floor.visible = false;
+   player1.visible = false;
+   player2.visible = false;
+   platform1.visible = false;
+   platform2.visible = false;
+   platform3.visible = false;
+   platform4.visible = false;
+   platform5.visible = false;
+   platform6.visible = false;
+   platform7.visible = false;
+   platform8.visible = false;
+   platform9.visible = false;
+   platform10.visible = false;
+   platform11.visible = false;
+   platform12.visible = false;
+   platform13.visible = false;
+   platform14.visible = false;
+   platform15.visible = false;
+   platform16.visible = false;
+   spikes1.visible = false;
+   spikes2.visible = false;
+   spikes3.visible = false;
+   spikes4.visible = false;
+   spikes5.visible = false;
+   spikes6.visible = false;
+   spikes7.visible = false;
+   spikes8.visible = false;
+   spikes9.visible = false;
+   spikes10.visible = false;
+   spikes11.visible = false;
+   spikes12.visible = false;
+   spikes13.visible = false;
+   spikes14.visible = false;
+   spikes15.visible = false;
+   spikes16.visible = false;
+   button1.visible = false;
+   button2.visible = false;
+   button3.visible = false;
+   button4.visible = false;
+   button5.visible = false;
+   button6.visible = false;
+   button7.visible = false;
+   button8.visible = false;
+   wall1.visible = false;
+   wall2.visible = false;
+   wall3.visible = false;
+   wall4.visible = false;
+   wall5.visible = false;
+   wall6.visible = false;
+   wall7.visible = false;
 
   }
 
@@ -626,13 +1049,16 @@ function theend() {
    image(help, 0, 0);
 
    textSize(26);
+   fill(0);
+   text("Player 1 uses WASD to move",width/4,height/2);
    fill(255);
-   stroke(0);
-   text("Click '<<' & '>>' buttons or 'A' & 'D' keys to activate flipper",width/2,height/2+150);
-   text("Click 'GO' button or 'Spacebar' key to launch the ball",width/2,height/2+200);
-   text("Click numbers '1,2,3' to Navigate the Pages",width/2,height/2+250);
-   text("Point System: Walls = 1 point, Big Circle = 5 points,",width/2,height/2+300);
-   text("& Small Circle = 10 points",width/2,height/2+350);
+   text("Player 2 uses Arrow Keys to move",width*0.75,height/2);
+   fill(0);
+   text("Click numbers '1,2,3' to Navigate the Pages",width/4,height/2+100);
+   text("Notice the color coordination of the Level",width/4,height/2+150);
+   fill(255);
+   text("Complete the Level together",width*0.75,height/2+100);
+   text("Both players must touch the end to win",width*0.75,height/2+150);
 
  }
 

@@ -22,7 +22,7 @@ function preload() {
     snd6 = loadSound("assets/5.wav");
     snd7 = loadSound("assets/6.wav");
 
-    bg = loadImage("assets/beach.png");
+    bg = loadImage("assets/bg.png");
 }
 
 
@@ -51,6 +51,8 @@ let cnv  =  createCanvas(1280, 720);
     mgr.addScene (intro);
     mgr.addScene (scene2);
     mgr.addScene (theend);
+    mgr.addScene (losescene);
+    mgr.addScene (winscene);
     mgr.showNextScene();
 
 }
@@ -98,6 +100,12 @@ function keyPressed() {
         case 'h':
         case 'H':
             mgr.showScene(theend, true);
+            break;
+        case '9':
+            mgr.showScene(losescene, true);
+            break;
+        case '0':
+            mgr.showScene(winscene, true);
             break;
     }
     
