@@ -41,11 +41,12 @@ let cnv;
 
 
 function setup() {
-let cnv  =  createCanvas(1280, 720);
-  //  console.log(hell);
-  angleMode(DEGREES);
-  cnv.mousePressed(setupSound); // callback function
-     mgr = new SceneManager();
+    let cnv  =  createCanvas(1280, 720);
+
+    //  console.log(hell);
+    angleMode(DEGREES);
+    cnv.mousePressed(setupSound); // callback function
+    mgr = new SceneManager();
     // Preload scenes. Preloading is normally optional
     // ... but needed if showNextScene() is used.
     mgr.addScene (intro);

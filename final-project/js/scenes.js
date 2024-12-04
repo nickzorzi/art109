@@ -264,54 +264,73 @@ function scene2()  {
       zone1 = new Sprite(580, 600, 140, 240);
       zone1.collider = 'none';
       zone1.color = 'black';
+      zone1.stroke = 'black';
+      zone1.strokeWeight = 0;
 
       zone2 = new Sprite(150, 380, 280, 200);
       zone2.collider = 'none';
       zone2.color = 'white';
+      zone2.strokeWeight = 0;
 
       zone3 = new Sprite(735, 180, 180, 160);
       zone3.collider = 'none';
       zone3.color = 'black';
+      zone3.stroke = 'black';
+      zone3.strokeWeight = 0;
 
       zone4 = new Sprite(710, 270, 130, 130);
       zone4.collider = 'none';
       zone4.color = 'white';
+      zone4.strokeWeight = 0;
 
       zone5 = new Sprite(600, 455, 100, 45);
       zone5.collider = 'none';
       zone5.color = 'black';
+      zone5.stroke = 'black';
+      zone5.strokeWeight = 0;
 
       zone6 = new Sprite(600, 385, 100, 100);
       zone6.collider = 'none';
       zone6.color = 'white';
+      zone6.strokeWeight = 0;
 
       zone7 = new Sprite(480, 395, 100, 45);
       zone7.collider = 'none';
       zone7.color = 'black';
+      zone7.stroke = 'black';
+      zone7.strokeWeight = 0;
 
       zone8 = new Sprite(480, 75, 100, 45);
       zone8.collider = 'none';
       zone8.color = 'white';
+      zone8.strokeWeight = 0;
 
       zone9 = new Sprite(190, 130, 340, 300);
       zone9.collider = 'none';
       zone9.color = 'white';
+      zone9.strokeWeight = 0;
 
       zone10 = new Sprite(1210, 250, 100, 60);
       zone10.collider = 'none';
       zone10.color = 'black';
+      zone10.stroke = 'black';
+      zone10.strokeWeight = 0;
 
       zone11 = new Sprite(1030, 530, 150, 100);
       zone11.collider = 'none';
       zone11.color = 'black';
+      zone11.stroke = 'black';
+      zone11.strokeWeight = 0;
 
       zone12 = new Sprite(700, 650, 100, 100);
       zone12.collider = 'none';
       zone12.color = 'white';
+      zone12.strokeWeight = 0;
 
       zone13 = new Sprite(967, 645, 277, 130);
       zone13.collider = 'none';
       zone13.color = 'white';
+      zone13.strokeWeight = 0;
 
       home = new Sprite();
       home.y = 590;
@@ -661,12 +680,12 @@ function scene2()  {
       if (kb.pressing('a')) {
          player1.vel.x = -2;
       }
-      if (player1.colliding(floor) || player1.colliding(player2) || player1.colliding(platform1) || player1.colliding(platform3) || player1.colliding(platform4) || player1.colliding(platform6) || player1.colliding(platform7) || player1.colliding(platform8) || player1.colliding(platform9) || player1.colliding(platform10) || player1.colliding(platform12) || player1.colliding(platform14) || player1.colliding(platform15) || player1.colliding(platform16)) {
+      if (player1.colliding(floor) || player1.colliding(player2) || player1.colliding(platform1) || player1.colliding(platform3) || player1.colliding(platform4) || player1.colliding(platform6) || player1.colliding(platform7) || player1.colliding(platform8) || player1.colliding(platform9) || player1.colliding(platform10) || player1.colliding(platform11) || player1.colliding(platform12) || player1.colliding(platform13) || player1.colliding(platform14) || player1.colliding(platform15) || player1.colliding(platform16)) {
          if (kb.pressing('w') && player1.velocity.y === 0) {
             player1.vel.y = -6;
          }
       }
-      if (player1.colliding(platform2) || player1.colliding(platform5) || player1.colliding(platform11) || player1.colliding(platform13)) {
+      if (player1.colliding(platform2) || player1.colliding(platform5)) {
          if (kb.pressing('w')) {
             player1.vel.y = -6;
          }
@@ -678,12 +697,12 @@ function scene2()  {
       if (kb.pressing('ArrowLeft')) {
          player2.vel.x = -2;
       }
-      if (player2.colliding(floor) || player2.colliding(player1) || player2.colliding(platform1) || player2.colliding(platform3) || player2.colliding(platform4) || player2.colliding(platform6) || player2.colliding(platform7) || player2.colliding(platform8) || player2.colliding(platform9) || player2.colliding(platform10) || player2.colliding(platform12) || player2.colliding(platform14) || player2.colliding(platform15) || player2.colliding(platform16)) {
+      if (player2.colliding(floor) || player2.colliding(player1) || player2.colliding(platform1) || player2.colliding(platform3) || player2.colliding(platform4) || player2.colliding(platform6) || player2.colliding(platform7) || player2.colliding(platform8) || player2.colliding(platform9) || player2.colliding(platform10) || player2.colliding(platform11) || player2.colliding(platform12) || player2.colliding(platform13) || player2.colliding(platform14) || player2.colliding(platform15) || player2.colliding(platform16)) {
          if (kb.pressing('ArrowUp') && player2.velocity.y === 0) {
             player2.vel.y = -6;
          }
       }
-      if (player2.colliding(platform2) || player2.colliding(platform5) || player2.colliding(platform11) || player1.colliding(platform13)) {
+      if (player2.colliding(platform2) || player2.colliding(platform5)) {
          if (kb.pressing('ArrowUp')) {
             player2.vel.y = -6;
          }
@@ -776,6 +795,39 @@ function scene2()  {
       // platform10.overlaps(platform13);
 
       if (player1.colliding(home) & player2.colliding(home)) {
+
+         player1.remove();
+         player2.remove();
+         platform12.remove();
+         box.remove();
+
+         platform12 = new Sprite();
+	      platform12.y = 405;
+         platform12.x = 1050;
+	      platform12.w = 120;
+	      platform12.h = 5;
+         platform12.color = 'grey';
+
+         player1 = new Sprite(50, 700);
+         player1.w = 40;
+         player1.h = 40;
+         player1.color = 'black';
+         player1.rotationLock = true;
+         player1.mass = 2;
+
+         player2 = new Sprite(100, 700);
+         player2.w = 40;
+         player2.h = 40;
+         player2.color = 'white';
+         player2.rotationLock = true;
+         player2.mass = 2;
+
+         box = new Sprite(715, 180);
+         box.w = 25;
+         box.h = 25;
+         box.color = 'grey';
+         box.rotationLock = true;
+
          mgr.showScene(winscene, true);
       }
 
