@@ -1,0 +1,124 @@
+/*
+CSS RESETS:
+ Border box reset:
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ 62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    font-size: 1.6rem;
+    /* font-size 1.6rem is now the same as 16px */
+    line-height: 1.6;
+    overflow: hidden;
+    align-content: center;
+    background-color: #202020;
+}
+.button {
+    background: #808080;
+    padding: 10px;
+    margin-bottom: 20px;
+    line-height: 70px;
+    font-size: 40px;
+    color: black;
+    /* border-radius: 20px; */
+    text-align: center;
+    cursor: pointer; 
+}
+.button:hover {
+    background: #606060;
+}
+.title {
+    background: #808080;
+    padding: 20px;
+    line-height: 70px;
+    font-size: 100px;
+    color: black;
+    /* border-radius: 20px; */
+    text-align: center; 
+}
+.desc {
+    background: #808080;
+    padding: 10px;
+    line-height: 30px;
+    font-size: 20px;
+    color: black;
+    /* border-radius: 20px; */
+    text-align: center;
+    margin-bottom: 10px;
+}
+.statement {
+    background: #808080;
+    padding: 60px;
+    line-height: 30px;
+    font-size: 20px;
+    color: black;
+    /* border-radius: 20px; */
+}
+
+.home-page {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #404040; */
+    /* height: 100%;
+    width: 100%; */
+}
+.content-wrapper {
+    margin: 0 600;
+    padding: 10px;
+    max-width: 60vw;
+    z-index: 2;
+}
+.button-wrapper {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 800px;
+}
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    align-content: center;
+    justify-content: space-between;
+}
+
+#white {
+    background-color: white;
+    color: black;
+}
+
+#black {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    color: black;
+}
+
+span {
+    color: white;
+}

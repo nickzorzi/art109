@@ -1,18 +1,21 @@
 body {
-    padding: 50;
     margin: 0;
     display: grid;
     align-content: center;
     align-items: center;
     text-align: center;
-    background-color: #222;
+    background-color: #202020;
 }
 
 h1 {
-    color:#ee9;
+    color: white;
     font-size: 20;
 }
 
 p {
-    color:#fa0;
+    color:white;
+}
+
+a {
+    color:white;
 }

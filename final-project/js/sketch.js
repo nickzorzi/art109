@@ -14,13 +14,12 @@ function preload() {
 //   snd1 = loadSound("assets/beat.mp3");
 //   snd2 = loadSound("assets/wood.mp3");
 
-    snd1 = loadSound("assets/gong.mp3");
-    snd2 = loadSound("assets/1.wav");
-    snd3 = loadSound("assets/2.wav");
-    snd4 = loadSound("assets/3.wav");
-    snd5 = loadSound("assets/4.wav");
-    snd6 = loadSound("assets/5.wav");
-    snd7 = loadSound("assets/6.wav");
+    snd1 = loadSound("assets/1.wav");
+    snd2 = loadSound("assets/2.wav");
+    snd3 = loadSound("assets/3.wav");
+    snd4 = loadSound("assets/4.wav");
+    snd5 = loadSound("assets/5.wav");
+    snd6 = loadSound("assets/6.flac");
 
     bg = loadImage("assets/bg.png");
 }

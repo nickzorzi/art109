@@ -112,7 +112,7 @@ function intro()  {
       title = loadImage("assets/title.png");
 
       playButton = new Button({
-         x: 640,	y: 400,
+         x: 640,	y: 360,
          width: 150,		height: 50,
          align_x: 0,		align_y: 0,
          content: 'PLAY',
@@ -150,6 +150,12 @@ function intro()  {
       
       // fill(255);
       // ellipse(500,250,75,75);
+
+      textSize(26);
+      fill(0);
+      text("Player 1 - Z(left) P(right) 5(up)",width/4,height/2);
+      fill(255);
+      text("Player 2 - Q(left) M(right) 7(up)",width*0.75,height/2);
       
       playButton.draw();
     }
@@ -674,45 +680,63 @@ function scene2()  {
    this.draw = function() {
       background('#404040');
 
-      if (kb.pressing('d')) {
+      if (kb.pressing('p')) {
          player1.vel.x = 2;
       }
-      if (kb.pressing('a')) {
+      if (kb.pressing('z')) {
          player1.vel.x = -2;
       }
       if (player1.colliding(floor) || player1.colliding(player2) || player1.colliding(platform1) || player1.colliding(platform3) || player1.colliding(platform4) || player1.colliding(platform6) || player1.colliding(platform7) || player1.colliding(platform8) || player1.colliding(platform9) || player1.colliding(platform10) || player1.colliding(platform11) || player1.colliding(platform12) || player1.colliding(platform13) || player1.colliding(platform14) || player1.colliding(platform15) || player1.colliding(platform16)) {
-         if (kb.pressing('w') && player1.velocity.y === 0) {
+         if (kb.pressing('5') && player1.velocity.y === 0) {
             player1.vel.y = -6;
+
+            if (snd6.isPlaying()) {
+
+               snd6.pause(); // .play() will resume from .pause() position
+         
+            } else {
+               snd6.play();
+         
+            }
          }
       }
       if (player1.colliding(platform2) || player1.colliding(platform5)) {
-         if (kb.pressing('w')) {
+         if (kb.pressing('5')) {
             player1.vel.y = -6;
          }
       }
 
-      if (kb.pressing('ArrowRight')) {
+      if (kb.pressing('q')) {
          player2.vel.x = 2;
       }
-      if (kb.pressing('ArrowLeft')) {
+      if (kb.pressing('m')) {
          player2.vel.x = -2;
       }
       if (player2.colliding(floor) || player2.colliding(player1) || player2.colliding(platform1) || player2.colliding(platform3) || player2.colliding(platform4) || player2.colliding(platform6) || player2.colliding(platform7) || player2.colliding(platform8) || player2.colliding(platform9) || player2.colliding(platform10) || player2.colliding(platform11) || player2.colliding(platform12) || player2.colliding(platform13) || player2.colliding(platform14) || player2.colliding(platform15) || player2.colliding(platform16)) {
-         if (kb.pressing('ArrowUp') && player2.velocity.y === 0) {
+         if (kb.pressing('7') && player2.velocity.y === 0) {
             player2.vel.y = -6;
+
+            if (snd4.isPlaying()) {
+
+               snd4.pause(); // .play() will resume from .pause() position
+         
+            } else {
+               snd4.play();
+         
+            }
          }
       }
       if (player2.colliding(platform2) || player2.colliding(platform5)) {
-         if (kb.pressing('ArrowUp')) {
+         if (kb.pressing('7')) {
             player2.vel.y = -6;
          }
       }
 
-      if (player1.colliding(wall1) || player1.colliding(wall2) || player1.colliding(wall3) || player1.colliding(wall4) || player1.colliding(wall5)) {
+      if (player1.colliding(wall1) || player1.colliding(wall2) || player1.colliding(wall3) || player1.colliding(wall4) || player1.colliding(wall5) || player1.colliding(wall6) || player1.colliding(wall7)) {
          player1.vel.y = 0;
       }
 
-      if (player2.colliding(wall1) || player2.colliding(wall2) || player2.colliding(wall3) || player2.colliding(wall4) || player2.colliding(wall5)) {
+      if (player2.colliding(wall1) || player2.colliding(wall2) || player2.colliding(wall3) || player2.colliding(wall4) || player2.colliding(wall5) || player2.colliding(wall6) || player2.colliding(wall7)) {
          player2.vel.y = 0;
       }
 
@@ -918,12 +942,12 @@ function losescene() {
   this.enter = function() {
    console.log("You Lost");
 
-   if (snd7.isPlaying()) {
+   if (snd2.isPlaying()) {
 
-      snd7.pause(); // .play() will resume from .pause() position
+      snd2.pause(); // .play() will resume from .pause() position
 
    } else {
-      snd7.play();
+      snd2.play();
 
    }
 
@@ -1023,12 +1047,12 @@ function winscene() {
   this.enter = function() {
    console.log("You Win");
 
-   if (snd7.isPlaying()) {
+   if (snd3.isPlaying()) {
 
-      snd7.pause(); // .play() will resume from .pause() position
+      snd3.pause(); // .play() will resume from .pause() position
 
    } else {
-      snd7.play();
+      snd3.play();
 
    }
 
@@ -1132,12 +1156,12 @@ function theend() {
   this.enter = function() {
      console.log("we are entering the result scene");
 
-  if (snd7.isPlaying()) {
+  if (snd1.isPlaying()) {
 
-      snd7.pause(); // .play() will resume from .pause() position
+      snd1.pause(); // .play() will resume from .pause() position
 
   } else {
-      snd7.play();
+      snd1.play();
 
   }
 
@@ -1221,9 +1245,9 @@ function theend() {
 
    textSize(26);
    fill(0);
-   text("Player 1 uses WASD to move",width/4,height/2);
+   text("Player 1 - Z(left) P(right) 5(up)",width/4,height/2);
    fill(255);
-   text("Player 2 uses Arrow Keys to move",width*0.75,height/2);
+   text("Player 2 - Q(left) M(right) 7(up)",width*0.75,height/2);
    fill(0);
    text("Click numbers '1,2,3' to Navigate the Pages",width/4,height/2+100);
    text("Notice the color coordination of the Level",width/4,height/2+150);
