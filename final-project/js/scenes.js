@@ -706,10 +706,10 @@ function scene2()  {
          }
       }
 
-      if (kb.pressing('q')) {
+      if (kb.pressing('m')) {
          player2.vel.x = 2;
       }
-      if (kb.pressing('m')) {
+      if (kb.pressing('q')) {
          player2.vel.x = -2;
       }
       if (player2.colliding(floor) || player2.colliding(player1) || player2.colliding(platform1) || player2.colliding(platform3) || player2.colliding(platform4) || player2.colliding(platform6) || player2.colliding(platform7) || player2.colliding(platform8) || player2.colliding(platform9) || player2.colliding(platform10) || player2.colliding(platform11) || player2.colliding(platform12) || player2.colliding(platform13) || player2.colliding(platform14) || player2.colliding(platform15) || player2.colliding(platform16)) {
